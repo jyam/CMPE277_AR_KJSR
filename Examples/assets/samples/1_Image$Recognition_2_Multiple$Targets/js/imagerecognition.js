@@ -12,6 +12,7 @@ var World = {
 		});
 		
 		this.imgButton = new AR.ImageResource("assets/buyButton.png");
+		this.imgButton2 = new AR.ImageResource("assets/gamestopButton.png");
 
 		var imgPokemonX = new AR.ImageResource("assets/pokemonXDesc.png");
 		var overlayPokemonX = new AR.ImageDrawable(imgPokemonX, 0.5, {
@@ -24,10 +25,16 @@ var World = {
 			offsetY: 0.0,
 			zOrder: 1
 		});
+		
+		var pagePokemonXButtonGS = this.createWwwButton2("http://www.gamestop.com/nintendo-3ds/games/pokemon-x/107641", 0.5, {
+			offsetX: 0.5,
+			offsetY: -0.5,
+			zOrder: 1
+		});
 
 		var pagePokemonX = new AR.Trackable2DObject(this.tracker, "pokemonx", {
 			drawables: {
-				cam: [overlayPokemonX, pagePokemonXButton]
+				cam: [overlayPokemonX, pagePokemonXButton, pagePokemonXButtonGS]
 			}
 		});
 		
@@ -42,10 +49,16 @@ var World = {
 			offsetY: 0.0,
 			zOrder: 1
 		});
+		
+		var pagePokemonYButtonGS = this.createWwwButton2("http://www.gamestop.com/nintendo-3ds/games/pokemon-y/107642", 0.5, {
+			offsetX: 0.5,
+			offsetY: -0.5,
+			zOrder: 1
+		});
 
 		var pagePokemonY = new AR.Trackable2DObject(this.tracker, "pokemony", {
 			drawables: {
-				cam: [overlayPokemonY, pagePokemonYButton]
+				cam: [overlayPokemonY, pagePokemonYButton, pagePokemonYButtonGS]
 			}
 		});
 
@@ -60,10 +73,16 @@ var World = {
 			offsetY: 0.0,
 			zOrder: 1
 		});
+		
+		var pageSmashButtonGS = this.createWwwButton2("http://www.gamestop.com/nintendo-3ds/games/super-smash-bros/114503", 0.5, {
+			offsetX: 0.5,
+			offsetY: -0.5,
+			zOrder: 1
+		});
 
 		var pageSmash = new AR.Trackable2DObject(this.tracker, "smash3ds", {
 			drawables: {
-				cam: [overlaySmash, pageSmashButton]
+				cam: [overlaySmash, pageSmashButton, pageSmashButtonGS]
 			}
 		});
 		
@@ -78,10 +97,16 @@ var World = {
 			offsetY: 0.0,
 			zOrder: 1
 		});
+		
+		var pageZeldaButtonLBWGS = this.createWwwButton2("http://www.gamestop.com/nintendo-3ds/games/the-legend-of-zelda-a-link-between-worlds/110062", 0.5, {
+			offsetX: 0.5,
+			offsetY: -0.5,
+			zOrder: 1
+		});
 
 		var pageZeldaLBW = new AR.Trackable2DObject(this.tracker, "zeldalinkbetweenworlds", {
 			drawables: {
-				cam: [overlayZeldaLBW, pageZeldaButtonLBW]
+				cam: [overlayZeldaLBW, pageZeldaButtonLBW, pageZeldaButtonLBWGS]
 			}
 		});
 		
@@ -96,10 +121,16 @@ var World = {
 			offsetY: 0.0,
 			zOrder: 1
 		});
+		
+		var pageZeldaButtonOOTGS = this.createWwwButton2("http://www.gamestop.com/nintendo-3ds/games/the-legend-of-zelda-ocarina-of-time-3ds/89884", 0.5, {
+			offsetX: 0.5,
+			offsetY: -0.5,
+			zOrder: 1
+		});
 
 		var pageZeldaOOT = new AR.Trackable2DObject(this.tracker, "zeldaoot3ds", {
 			drawables: {
-				cam: [overlayZeldaOOT, pageZeldaButtonOOT]
+				cam: [overlayZeldaOOT, pageZeldaButtonOOT, pageZeldaButtonOOTGS]
 			}
 		});
 		
@@ -114,10 +145,16 @@ var World = {
 			offsetY: 0.0,
 			zOrder: 1
 		});
+		
+		var pageMarioKartButtonGS = this.createWwwButton2("http://www.gamestop.com/nintendo-3ds/games/mario-kart-7/89891", 0.5, {
+			offsetX: 0.5,
+			offsetY: -0.5,
+			zOrder: 1
+		});
 
 		var pageMarioKart = new AR.Trackable2DObject(this.tracker, "mariokart7", {
 			drawables: {
-				cam: [overlayMarioKart, pageMarioKartButton]
+				cam: [overlayMarioKart, pageMarioKartButton, pageMarioKartButtonGS]
 			}
 		});
 		
@@ -132,10 +169,16 @@ var World = {
 			offsetY: 0.0,
 			zOrder: 1
 		});
+		
+		var pagePokemonASButtonGS = this.createWwwButton2("http://www.gamestop.com/nintendo-3ds/games/pokemon-alpha-sapphire/114995", 0.5, {
+			offsetX: 0.5,
+			offsetY: -0.5,
+			zOrder: 1
+		});
 
 		var pagePokemonAS = new AR.Trackable2DObject(this.tracker, "pokemonalphasapphire", {
 			drawables: {
-				cam: [overlayPokemonAS, pagePokemonASButton]
+				cam: [overlayPokemonAS, pagePokemonASButton, pagePokemonASButtonGS]
 			}
 		});
 		
@@ -150,10 +193,16 @@ var World = {
 			offsetY: 0.0,
 			zOrder: 1
 		});
+		
+		var pagePokemonORButtonGS = this.createWwwButton2("http://www.gamestop.com/nintendo-3ds/games/pokemon-omega-ruby/114994", 0.5, {
+			offsetX: 0.5,
+			offsetY: -0.5,
+			zOrder: 1
+		});
 
 		var pagePokemonOR = new AR.Trackable2DObject(this.tracker, "pokemonomegaruby", {
 			drawables: {
-				cam: [overlayPokemonOR, pagePokemonORButton]
+				cam: [overlayPokemonOR, pagePokemonORButton, pagePokemonORButtonGS]
 			}
 		});
 		
@@ -168,10 +217,16 @@ var World = {
 			offsetY: 0.0,
 			zOrder: 1
 		});
+		
+		var pageYoshiNIButtonGS = this.createWwwButton2("http://www.gamestop.com/nintendo-3ds/games/yoshis-new-island/110061", 0.5, {
+			offsetX: 0.5,
+			offsetY: -0.5,
+			zOrder: 1
+		});
 
 		var pageYoshiNI = new AR.Trackable2DObject(this.tracker, "yoshisnewisland", {
 			drawables: {
-				cam: [overlayYoshiNI, pageYoshiNIButton]
+				cam: [overlayYoshiNI, pageYoshiNIButton, pageYoshiNIButtonGS]
 			}
 		});
 		
@@ -186,10 +241,16 @@ var World = {
 			offsetY: 0.0,
 			zOrder: 1
 		});
+		
+		var pageAnimalCrossingButtonGS = this.createWwwButton2("http://www.gamestop.com/nintendo-3ds/games/animal-crossing-new-leaf/89903", 0.5, {
+			offsetX: 0.5,
+			offsetY: -0.5,
+			zOrder: 1
+		});
 
 		var pageAnimalCrossing = new AR.Trackable2DObject(this.tracker, "animalcrossing", {
 			drawables: {
-				cam: [overlayAnimalCrossing, pageAnimalCrossingButton]
+				cam: [overlayAnimalCrossing, pageAnimalCrossingButton, pageAnimalCrossingButtonGS]
 			}
 		});
 		
@@ -204,10 +265,16 @@ var World = {
 			offsetY: 0.0,
 			zOrder: 1
 		});
+		
+		var pageCookingMamaButtonGS = this.createWwwButton2("http://www.gamestop.com/nintendo-3ds/games/cooking-mama-5-bon-appetit/115094", 0.5, {
+			offsetX: 0.5,
+			offsetY: -0.5,
+			zOrder: 1
+		});
 
 		var pageCookingMama = new AR.Trackable2DObject(this.tracker, "cookingmama5", {
 			drawables: {
-				cam: [overlayCookingMama, pageCookingMamaButton]
+				cam: [overlayCookingMama, pageCookingMamaButton, pageCookingMamaButtonGS]
 			}
 		});
 		
@@ -222,10 +289,17 @@ var World = {
 			offsetY: 0.0,
 			zOrder: 1
 		});
+		
+		var pageKirbyTDButtonGS = this.createWwwButton2("http://www.gamestop.com/nintendo-3ds/games/kirby-triple-deluxe/113815", 0.5, {
+			offsetX: 0.5,
+			offsetY: -0.5,
+			zOrder: 1
+		});
+		
 
 		var pageKirbyTD = new AR.Trackable2DObject(this.tracker, "kirbytd", {
 			drawables: {
-				cam: [overlayKirbyTD, pageKirbyTDButton]
+				cam: [overlayKirbyTD, pageKirbyTDButton, pageKirbyTDButtonGS]
 			}
 		});
 	},
@@ -238,6 +312,16 @@ var World = {
 			AR.context.openInBrowser(url);
 		};
 		return new AR.ImageDrawable(this.imgButton, size, options);
+	},
+	
+	createWwwButton2: function createWwwButtonFn(url, size, options) {
+		/*
+			As the button should be clickable the onClick trigger is defined in the options passed to the AR.ImageDrawable. In general each drawable can be made clickable by defining its onClick trigger. The function assigned to the click trigger calls AR.context.openInBrowser with the specified URL, which opens the URL in the browser.
+		*/
+		options.onClick = function() {
+			AR.context.openInBrowser(url);
+		};
+		return new AR.ImageDrawable(this.imgButton2, size, options);
 	},
 
 	worldLoaded: function worldLoadedFn() {
