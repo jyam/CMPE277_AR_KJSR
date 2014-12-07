@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SDK Examples</string>
+    <string name="app_name">KJSR AR Prototype</string>
     <string name="main_title_urlLauncher">Launch World via url</string>
     <string name="compass_accuracy_low">Please re-calibrate compass by waving your device in a figure 8 motion.</string>
     <string name="location_fetching">Trying to find out where you are</string>
@@ -15,5 +15,5 @@
     <string name="poi_description">Description</string>
     <string name="poi_id">ID</string>
     <string name="title_activity_sample1_poi_detail">Sample 5.1 POI Detail</string>
-    <string name="footer">Sample App</string>
+    <string name="footer">KJSR AR Prototype</string>
 </resources>
