@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Wikitude SDK Android 4.0 Documentation</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans&subset=latin">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/docs.css">
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="css/github.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css">
+    
+    <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="js/highlight-8.0.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min-0.5.3.js"></script>
+    <script type="text/javascript" src="js/deprecated.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Every image referenced from a Markdown document
+            $("#content img").each(function() {
+                // Let's put a caption if there is one
+                if($(this).attr("alt"))
+                    $(this).wrap('<figure class="image"></figure>')
+                        .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+                });
+        });
+    </script>
+
+    <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if(isVersionDeprecated())
+                document.getElementById('deprecatedNote').style.display='block';
+            document.getElementById("documentationSelect").onchange = function() {
+                var selectedOption = this.value;
+                 console.log(selectedOption);
+                 window.top.location.href = "http://www.wikitude.com/developer/documentation/" + selectedOption;
+                }
+        });
+    </script>
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+         
+
+<div id="sidebar">
+    <div id="topnav">
+    <img src="images/140529_WT_SDK_Logo_01_v3.png">
+    <h1><a href="">Documentation</a></h1>
+    <h2>Wikitude SDK Android</h2>
+    
+    <div id="version">version: 4.0</div>
+    
+    <div id="deprecatedNote" class="warning" style="display:none;">Note you are viewing the documentation of a deprecated version. Please check <a href="http://www.wikitude.com/developer/documentation">www.wikitude.com/developer/documentation</a></div>
+   
+    
+    Other versions:
+    <select id="documentationSelect">
+        
+            <option value="android"  selected > Android </option>
+        
+            <option value="epson"  > Epson </option>
+        
+            <option value="ios"  > iOS </option>
+        
+            <option value="glass"  > Google Glass </option>
+        
+            <option value="vuzix"  > Vuzix </option>
+        
+            <option value="htmlcss"  > Web </option>
+        
+            <option value="phonegap"  > PhoneGap </option>
+        
+            <option value="titanium"  > Titanium </option>
+        
+            <option value="xamarin"  > Xamarin </option>
+        
+            <option value=""  > --- </option>
+        
+            <option value="cloud"  > Targets API </option>
+        
+    </select>
+    
+
+
+    <form action="search.html"><input id="search" type="text" placeholder="Search documentation" name="q" /></form>
+
+
+    </div>
+
+     <div id="mainnav">
+    <nav id="toc">
+        
+    <ol>
+    
+        <li>
+            <a href="gettingstartedandroid.html#getting-started">Getting started</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="setupguideandroid.html#setup-guide-android">Setup Guide Android</a>
+            
+        </li>
+    
+        <li>
+            <a href="supporteddevicesandroid.html#supported-android-devices">Supported Android Devices</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="samples.html#examples">Examples</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="imagerecognition.html#image-recognition">Image Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="imagerecognitionand3d.html#3d-models">3D Models</a>
+            
+        </li>
+    
+        <li>
+            <a href="poi.html#point-of-interest-poi">Point Of Interest (POI)</a>
+            
+        </li>
+    
+        <li>
+            <a href="retrievingpoidata.html#retrieving-poi-data">Retrieving POI Data</a>
+            
+        </li>
+    
+        <li>
+            <a href="browsingpois.html#browsing-pois">Browsing POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="video.html#video-drawables">Video Drawables</a>
+            
+        </li>
+    
+        <li>
+            <a href="imagerecognitionandgeo.html#image-recognition-and-geo">Image Recognition And Geo</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemir.html#solar-system-ir">Solar System (IR)</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemgeo.html#solar-system-geo">Solar System (Geo)</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#development-workflow">Development Workflow</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="workflow.html#code-test-debug">Code, Test, Debug</a>
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#on-device-debugging">On-Device Debugging</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#3d-assets-workflow">3D Assets Workflow</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#working-with-3d-animations">Working with 3D Animations</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#free-trial-license">Free Trial License</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="triallicense.html#how-to-obtain-a-free-trial-license">How to obtain a free trial license</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#where-should-i-enter-the-license-key">Where should I enter the license key</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="tools.html#tools">Tools</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="ade.html#ade">ADE</a>
+            
+        </li>
+    
+        <li>
+            <a href="logger.html#logger">Logger</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#target-management">Target Management</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetguide.html#best-practice-for-target-images">Best practice for target images</a>
+            
+        </li>
+    
+        <li>
+            <a href="encoder.html#wikitude-3d-encoder">Wikitude 3D Encoder</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="referenceandroid.html#reference">Reference</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="referenceandroid.html#javascript-api">JavaScript API</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceandroid.html#android-javadocs">Android JavaDocs</a>
+            
+        </li>
+    
+        <li>
+            <a href="sdu-dbs.html#sdu-and-dbs">SDU and DBS</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="migration-android.html#migration">Migration</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="migration-android.html#migrate-from-33-to-40">Migrate from 3.3 to 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-android.html#migrate-from-32-to-33">Migrate from 3.2 to 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-android.html#migrate-from-31-to-32">Migrate from 3.1 to 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-android.html#migrate-from-30-to-31">Migrate from 3.0 to 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-android.html#migrate-from-20-to-30">Migrate from 2.0 to 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-common.html#upgrading-targets-for-sdk-4x">Upgrading targets for SDK 4.x</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-common.html#migrating-targets-from-sdk-1x">Migrating targets from SDK 1.x</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-android-release-notes">Wikitude SDK Android Release Notes</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-40">Wikitude SDK 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-33">Wikitude SDK 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-32">Wikitude SDK 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-31">Wikitude SDK 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-30">Wikitude SDK 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-20">Wikitude SDK 2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-12">Wikitude SDK 1.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-11">Wikitude SDK 1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-10">Wikitude SDK 1.0</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+</ol>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+      <footer id="footer">
+        &copy; 2012 -2014 <a href="http://www.wikitude.com">Wikitude GmbH</a> · <a href="http://www.wikitude.com/imprint">Imprint</a>
+        </footer>
+         </div>
+</div>
+        <div id="content">
+            <a name="examples"></a><h1>Examples</h1>
+<p>The following examples should give you an overview of the capabilities offered by the Wikitude SDK. Each sample is capable of running without modifications on all supported platforms. </p>
+<p>Each of the included examples is structured as following:</p>
+<ul>
+<li><code>index.html</code>: entry point for the experience</li>
+<li><code>js/*</code>: includes the necessary JavaScript files</li>
+<li><code>css/*</code>: css style sheets required</li>
+<li><code>assets/*</code>: contains images, 3D models and tracker files</li>
+</ul>
+<p>Inside the <code>js/</code> folder the main JavaScript file is named like the example. (the example <em>Image Recognition</em> has its JavaScript code in the <code>js/imagerecognition.js</code> file). Code which is mentioned in the description of the examples can be found in this file, if not explicitly stated otherwise.</p>
+<a name="samples-on-github"></a><h3>Samples on GitHub</h3>
+<p>If you are just interested in browsing through the code of the augmented reality experience you can also find the entire source code of the samples on <a href="https://github.com/Wikitude/wikitude-sdk-samples" target="_top">GitHub</a>### Android SDK Examples</p>
+<p>This section describes the <code>SDK Sample</code> project in detail and highlights the main features and use-cases of the Wikitude SDK.
+The project is part of the SDK bundle and is an Android Eclipse project, ready to run on any of the supported Android devices.</p>
+<p><em>Note: You cannot run Wikitude SDK project on Android Emulator due to OpenGL restrictions.</em></p>
+<p>Run through the setup guide, install the sample project on your device and scroll through the sample list.</p>
+<p>The project&#39;s <code>asset</code> folder contains implementation of the various ARchitect World&#39;s. 
+Implementation of the native Android activities is available in the <code>src</code> folder. </p>
+<a name="setup"></a><h3>Setup</h3>
+<ul>
+<li>Download latest <a href="http://developer.android.com/sdk/index.html" target="_top">Android SDK</a></li>
+<li>Launch ADT, which is part of the Android SDK or <a href="http://www.eclipse.org/downloads/packages/eclipse-classic-422/junosr2" target="_top">Eclipse</a> with installed <a href="http://developer.android.com/tools/sdk/eclipse-adt.html" target="_top">Android Plugin</a> </li>
+<li>From the main menu bar, select   <code>File</code> -&gt; <code>Import…</code> which will open the import wizard.</li>
+<li>Select <code>General</code> -&gt; <code>Existing Project into Workspace</code> and click <code>Next</code>.</li>
+<li>Choose <code>Select root directory</code>, click <code>Browse</code></li>
+<li>Navigate to the <code>SDKExamples</code> project folder in your filesystem.</li>
+<li>Click <code>Finish</code> to start the import.</li>
+<li>Right click the project folder, click <code>Preferences</code> and <code>Android</code></li>
+<li><p>Ensure you have very latest SDK (14+) checked in the Build Target list</p>
+<p><img src="images/android_sdk_version.png" alt="Project Build Targets"></p>
+</li>
+<li><p>Use an Android device that has all hard- and software requirements (should be similar to Samsung Galaxy S2) and <a href="http://support.google.com/coordinate/bin/answer.py?hl=en&answer=2569281" target="_top">enable your location services in system settings</a></p>
+</li>
+<li>Enter <code>Settings</code> -&gt; <code>Applications</code> -&gt; <code>Developer</code> -&gt; check <code>USB debugging</code></li>
+<li>Plug in the device via USB.</li>
+<li>Right click the project folder again select <code>Run as…</code> - <code>Android Application</code> and select the target device</li>
+<li>The sample application is then installed onto your device</li>
+</ul>
+<a name="nativejavascript-communication"></a><h3>Native/JavaScript Communication</h3>
+<p>The samples mainly describe  how to launch an AR experience in your Android activity - anything relevant for AR is written in the provided HTML/JS file.</p>
+<p>Although it is highly recommended to implement logic in pure HTML and JavaScript at some point in time it makes sense to interact between native Android and the JavaScript of your AR experience.</p>
+<p>One may for instance pass data for points of interest (POI) from native Android to JavaScript. 
+Define a method named <code>newData(json)</code> in the JavaScript file and use <code>architectView.callJavascript(newData(&#39;&quot; + poiDataAsJson +&quot;)&#39;)</code> to call the method and pass over the values properly. <a href="http://www.json.org/" target="_top">JSON Format</a> is the fastest way to pass bulk of information, like translations, metadata and POI information over to your JavaScript. 
+There are several ways to <a href="http://developer.android.com/reference/org/json/package-summary.html" target="_top">create a JSON in Android</a>.</p>
+<p>Sometimes events like a click in your AR experience should cause a reaction in native Android, like launching another screen when clicking a placemark or image target. To achieve that you   need to register a <code>urlListener</code> using <code>architectView.registerUrlListener()</code> in the activity.
+Any <code>document.location</code> changes to <code>architectsdk://</code> will fire an event in your listener (e.g. <code>document.location = architectsdk://YOUR-INFO</code>). Listener is informed about the invoked url and can then react on.</p>
+<p><em>Note: Missing urlListener registration will cause an HTTP error when calling <code>document.location = architectsdk://YOUR-INFO</code></em></p>
+
+        </div>
+      
+    </div>
+</body>
+</html>

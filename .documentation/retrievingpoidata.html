@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Wikitude SDK Android 4.0 Documentation</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans&subset=latin">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/docs.css">
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="css/github.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css">
+    
+    <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="js/highlight-8.0.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min-0.5.3.js"></script>
+    <script type="text/javascript" src="js/deprecated.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Every image referenced from a Markdown document
+            $("#content img").each(function() {
+                // Let's put a caption if there is one
+                if($(this).attr("alt"))
+                    $(this).wrap('<figure class="image"></figure>')
+                        .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+                });
+        });
+    </script>
+
+    <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if(isVersionDeprecated())
+                document.getElementById('deprecatedNote').style.display='block';
+            document.getElementById("documentationSelect").onchange = function() {
+                var selectedOption = this.value;
+                 console.log(selectedOption);
+                 window.top.location.href = "http://www.wikitude.com/developer/documentation/" + selectedOption;
+                }
+        });
+    </script>
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+         
+
+<div id="sidebar">
+    <div id="topnav">
+    <img src="images/140529_WT_SDK_Logo_01_v3.png">
+    <h1><a href="">Documentation</a></h1>
+    <h2>Wikitude SDK Android</h2>
+    
+    <div id="version">version: 4.0</div>
+    
+    <div id="deprecatedNote" class="warning" style="display:none;">Note you are viewing the documentation of a deprecated version. Please check <a href="http://www.wikitude.com/developer/documentation">www.wikitude.com/developer/documentation</a></div>
+   
+    
+    Other versions:
+    <select id="documentationSelect">
+        
+            <option value="android"  selected > Android </option>
+        
+            <option value="epson"  > Epson </option>
+        
+            <option value="ios"  > iOS </option>
+        
+            <option value="glass"  > Google Glass </option>
+        
+            <option value="vuzix"  > Vuzix </option>
+        
+            <option value="htmlcss"  > Web </option>
+        
+            <option value="phonegap"  > PhoneGap </option>
+        
+            <option value="titanium"  > Titanium </option>
+        
+            <option value="xamarin"  > Xamarin </option>
+        
+            <option value=""  > --- </option>
+        
+            <option value="cloud"  > Targets API </option>
+        
+    </select>
+    
+
+
+    <form action="search.html"><input id="search" type="text" placeholder="Search documentation" name="q" /></form>
+
+
+    </div>
+
+     <div id="mainnav">
+    <nav id="toc">
+        
+    <ol>
+    
+        <li>
+            <a href="gettingstartedandroid.html#getting-started">Getting started</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="setupguideandroid.html#setup-guide-android">Setup Guide Android</a>
+            
+        </li>
+    
+        <li>
+            <a href="supporteddevicesandroid.html#supported-android-devices">Supported Android Devices</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="samples.html#examples">Examples</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="imagerecognition.html#image-recognition">Image Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="imagerecognitionand3d.html#3d-models">3D Models</a>
+            
+        </li>
+    
+        <li>
+            <a href="poi.html#point-of-interest-poi">Point Of Interest (POI)</a>
+            
+        </li>
+    
+        <li>
+            <a href="retrievingpoidata.html#retrieving-poi-data">Retrieving POI Data</a>
+            
+        </li>
+    
+        <li>
+            <a href="browsingpois.html#browsing-pois">Browsing POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="video.html#video-drawables">Video Drawables</a>
+            
+        </li>
+    
+        <li>
+            <a href="imagerecognitionandgeo.html#image-recognition-and-geo">Image Recognition And Geo</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemir.html#solar-system-ir">Solar System (IR)</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemgeo.html#solar-system-geo">Solar System (Geo)</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#development-workflow">Development Workflow</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="workflow.html#code-test-debug">Code, Test, Debug</a>
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#on-device-debugging">On-Device Debugging</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#3d-assets-workflow">3D Assets Workflow</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#working-with-3d-animations">Working with 3D Animations</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#free-trial-license">Free Trial License</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="triallicense.html#how-to-obtain-a-free-trial-license">How to obtain a free trial license</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#where-should-i-enter-the-license-key">Where should I enter the license key</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="tools.html#tools">Tools</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="ade.html#ade">ADE</a>
+            
+        </li>
+    
+        <li>
+            <a href="logger.html#logger">Logger</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#target-management">Target Management</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetguide.html#best-practice-for-target-images">Best practice for target images</a>
+            
+        </li>
+    
+        <li>
+            <a href="encoder.html#wikitude-3d-encoder">Wikitude 3D Encoder</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="referenceandroid.html#reference">Reference</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="referenceandroid.html#javascript-api">JavaScript API</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceandroid.html#android-javadocs">Android JavaDocs</a>
+            
+        </li>
+    
+        <li>
+            <a href="sdu-dbs.html#sdu-and-dbs">SDU and DBS</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="migration-android.html#migration">Migration</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="migration-android.html#migrate-from-33-to-40">Migrate from 3.3 to 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-android.html#migrate-from-32-to-33">Migrate from 3.2 to 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-android.html#migrate-from-31-to-32">Migrate from 3.1 to 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-android.html#migrate-from-30-to-31">Migrate from 3.0 to 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-android.html#migrate-from-20-to-30">Migrate from 2.0 to 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-common.html#upgrading-targets-for-sdk-4x">Upgrading targets for SDK 4.x</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-common.html#migrating-targets-from-sdk-1x">Migrating targets from SDK 1.x</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-android-release-notes">Wikitude SDK Android Release Notes</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-40">Wikitude SDK 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-33">Wikitude SDK 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-32">Wikitude SDK 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-31">Wikitude SDK 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-30">Wikitude SDK 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-20">Wikitude SDK 2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-12">Wikitude SDK 1.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-11">Wikitude SDK 1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-10">Wikitude SDK 1.0</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+</ol>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+      <footer id="footer">
+        &copy; 2012 -2014 <a href="http://www.wikitude.com">Wikitude GmbH</a> · <a href="http://www.wikitude.com/imprint">Imprint</a>
+        </footer>
+         </div>
+</div>
+        <div id="content">
+            <a name="retrieving-poi-data"></a><h2>Retrieving POI Data</h2>
+<p>There are several ways to request and work with POI detail information in an ARchitect World.
+Depending on your application and use case, one might fit better than the other.</p>
+<p>This sample consists of three parts</p>
+<ol>
+<li><a href="#applicationmodel">From Application Model</a></li>
+<li><a href="#local">From a Local Resource </a></li>
+<li><a href="#webservice">From a Webservice</a></li>
+</ol>
+<p><a id="applicationmodel"></a></p>
+<a name="from-application-model-13"></a><h3>From Application Model (1/3)</h3>
+<p>Besides loading data from assets it is also possible to load data from a database, or to create it in native code. Use the platform common way to create JSON Objects of your data and use <code>architectView.callJavaScript()</code> to pass them to the ARchitect World&#39;s JavaScript.</p>
+<p>Have a look at <code>SampleCamContentFromNativeActivity.java</code> to get a better understanding of how data can be injected to JavaScript.
+<a id="local"></a></p>
+<a name="from-a-local-resource-23"></a><h3>From a Local Resource (2/3)</h3>
+<p>In case the data of your ARchitect World is static the content should be stored within the application.
+Create a JavaScript file (e.g. <code>myJsonData.js</code>) where a globally accessible variable is defined:</p>
+<pre><code class="lang-js">var myJsonData = …[YOUR-JSON-DATA]</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_ObtainPoiData_2_FromLocalResource/js/myJsonData.js#L1">GitHub</a>
+</div>
+
+<p>Include the JavaScript in the ARchitect Worlds HTML by adding <code>&lt;script src=&quot;js/myJsonData.js&quot;/&gt;</code> to make POI information available anywhere in your JavaScript.</p>
+<pre><code class="lang-js">// request POI data
+requestDataFromLocal: function requestDataFromLocalFn(lat, lon) {
+    World.loadPoisFromJsonData(myJsonData);
+}</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_ObtainPoiData_2_FromLocalResource/js/fromLocalResource.js#L103-L114">GitHub</a>
+</div>
+
+<p><em>Note: This sample uses static POI data and overwrites latitude and longitude values using <code>Helper.bringPlacesToUser</code>, you must remove this line to avoid this.</em></p>
+<p><a id="webservice"></a></p>
+<a name="from-a-webservice-33"></a><h3>From a Webservice (3/3)</h3>
+<p><a href="http://jquery.com/" target="_top">JQuery</a> provides a number of tools to load data from a remote origin. It is highly recommended to use the JSON format for POI information. Requesting and parsing is done in a few lines of code.</p>
+<p>Use e.g. <code>AR.context.onLocationChanged = World.locationChanged;</code> to define the method invoked on location updates. In this sample POI information is requested after the very first location update. Note: You may set <code>AR.context.onLocationChanged = null</code> afterwards to no longer receive location updates in <code>World.locationChanged</code>.</p>
+<p>It is recommended to store server information separately.</p>
+<pre><code class="lang-js">// holds server information
+var ServerInformation = {
+    // sample service returning dummy POIs
+    POIDATA_SERVER: &quot;http://example.wikitude.com/GetSamplePois/&quot;,
+    POIDATA_SERVER_ARG_LAT: &quot;lat&quot;,
+    POIDATA_SERVER_ARG_LON: &quot;lon&quot;,
+    POIDATA_SERVER_ARG_NR_POIS: &quot;nrPois&quot;
+};</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_ObtainPoiData_3_FromWebservice/js/fromWebservice.js#L2-L7">GitHub</a>
+</div>
+
+<p>Ensure that the server returns valid JSON and it is escaped properly (e.g. special characters in POI name…). </p>
+<p>The server response is passed over to <code>World.loadPoisFromJsonData(poiData)</code>, where the creation of markers and their camera representation is defined.</p>
+<pre><code class="lang-js">
+// location updates
+locationChanged: function locationChangedFn(lat, lon, alt, acc) {
+
+    /* Request data from server only once*/
+    if (!World.alreadyRequestedData) {
+        World.requestDataFromServer(lat, lon);
+        World.alreadyRequestedData = true;
+    }
+},</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_ObtainPoiData_3_FromWebservice/js/fromWebservice.js#L73-L80">GitHub</a>
+</div>
+
+<pre><code class="lang-js">
+// request POI data
+requestDataFromServer: function requestDataFromServerFn(lat, lon) {
+
+    // set helper var to avoid requesting places while loading
+    World.isRequestingData = true;
+    World.updateStatusMessage(&#39;Requesting places from web-service&#39;);
+
+    // server-url to JSON content provider
+    var serverUrl = ServerInformation.POIDATA_SERVER + &quot;?&quot; + ServerInformation.POIDATA_SERVER_ARG_LAT + &quot;=&quot; + lat + &quot;&amp;&quot; + ServerInformation.POIDATA_SERVER_ARG_LON + &quot;=&quot; + lon + &quot;&amp;&quot; + ServerInformation.POIDATA_SERVER_ARG_NR_POIS + &quot;=20&quot;;
+
+    var jqxhr = $.getJSON(serverUrl, function(data) {
+        World.loadPoisFromJsonData(data);
+    })
+        .error(function(err) {
+            World.updateStatusMessage(&quot;Invalid web-service response.&quot;, true);
+            World.isRequestingData = false;
+        })
+        .complete(function() {
+            World.isRequestingData = false;
+        });
+}</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_ObtainPoiData_3_FromWebservice/js/fromWebservice.js#L115-L137">GitHub</a>
+</div>
+
+        </div>
+      
+    </div>
+</body>
+</html>

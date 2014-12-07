@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Wikitude SDK Android 4.0 Documentation</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans&subset=latin">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/docs.css">
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="css/github.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css">
+    
+    <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="js/highlight-8.0.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min-0.5.3.js"></script>
+    <script type="text/javascript" src="js/deprecated.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Every image referenced from a Markdown document
+            $("#content img").each(function() {
+                // Let's put a caption if there is one
+                if($(this).attr("alt"))
+                    $(this).wrap('<figure class="image"></figure>')
+                        .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+                });
+        });
+    </script>
+
+    <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if(isVersionDeprecated())
+                document.getElementById('deprecatedNote').style.display='block';
+            document.getElementById("documentationSelect").onchange = function() {
+                var selectedOption = this.value;
+                 console.log(selectedOption);
+                 window.top.location.href = "http://www.wikitude.com/developer/documentation/" + selectedOption;
+                }
+        });
+    </script>
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+         
+
+<div id="sidebar">
+    <div id="topnav">
+    <img src="images/140529_WT_SDK_Logo_01_v3.png">
+    <h1><a href="">Documentation</a></h1>
+    <h2>Wikitude SDK Android</h2>
+    
+    <div id="version">version: 4.0</div>
+    
+    <div id="deprecatedNote" class="warning" style="display:none;">Note you are viewing the documentation of a deprecated version. Please check <a href="http://www.wikitude.com/developer/documentation">www.wikitude.com/developer/documentation</a></div>
+   
+    
+    Other versions:
+    <select id="documentationSelect">
+        
+            <option value="android"  selected > Android </option>
+        
+            <option value="epson"  > Epson </option>
+        
+            <option value="ios"  > iOS </option>
+        
+            <option value="glass"  > Google Glass </option>
+        
+            <option value="vuzix"  > Vuzix </option>
+        
+            <option value="htmlcss"  > Web </option>
+        
+            <option value="phonegap"  > PhoneGap </option>
+        
+            <option value="titanium"  > Titanium </option>
+        
+            <option value="xamarin"  > Xamarin </option>
+        
+            <option value=""  > --- </option>
+        
+            <option value="cloud"  > Targets API </option>
+        
+    </select>
+    
+
+
+    <form action="search.html"><input id="search" type="text" placeholder="Search documentation" name="q" /></form>
+
+
+    </div>
+
+     <div id="mainnav">
+    <nav id="toc">
+        
+    <ol>
+    
+        <li>
+            <a href="gettingstartedandroid.html#getting-started">Getting started</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="setupguideandroid.html#setup-guide-android">Setup Guide Android</a>
+            
+        </li>
+    
+        <li>
+            <a href="supporteddevicesandroid.html#supported-android-devices">Supported Android Devices</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="samples.html#examples">Examples</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="imagerecognition.html#image-recognition">Image Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="imagerecognitionand3d.html#3d-models">3D Models</a>
+            
+        </li>
+    
+        <li>
+            <a href="poi.html#point-of-interest-poi">Point Of Interest (POI)</a>
+            
+        </li>
+    
+        <li>
+            <a href="retrievingpoidata.html#retrieving-poi-data">Retrieving POI Data</a>
+            
+        </li>
+    
+        <li>
+            <a href="browsingpois.html#browsing-pois">Browsing POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="video.html#video-drawables">Video Drawables</a>
+            
+        </li>
+    
+        <li>
+            <a href="imagerecognitionandgeo.html#image-recognition-and-geo">Image Recognition And Geo</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemir.html#solar-system-ir">Solar System (IR)</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemgeo.html#solar-system-geo">Solar System (Geo)</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#development-workflow">Development Workflow</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="workflow.html#code-test-debug">Code, Test, Debug</a>
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#on-device-debugging">On-Device Debugging</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#3d-assets-workflow">3D Assets Workflow</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#working-with-3d-animations">Working with 3D Animations</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#free-trial-license">Free Trial License</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="triallicense.html#how-to-obtain-a-free-trial-license">How to obtain a free trial license</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#where-should-i-enter-the-license-key">Where should I enter the license key</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="tools.html#tools">Tools</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="ade.html#ade">ADE</a>
+            
+        </li>
+    
+        <li>
+            <a href="logger.html#logger">Logger</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#target-management">Target Management</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetguide.html#best-practice-for-target-images">Best practice for target images</a>
+            
+        </li>
+    
+        <li>
+            <a href="encoder.html#wikitude-3d-encoder">Wikitude 3D Encoder</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="referenceandroid.html#reference">Reference</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="referenceandroid.html#javascript-api">JavaScript API</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceandroid.html#android-javadocs">Android JavaDocs</a>
+            
+        </li>
+    
+        <li>
+            <a href="sdu-dbs.html#sdu-and-dbs">SDU and DBS</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="migration-android.html#migration">Migration</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="migration-android.html#migrate-from-33-to-40">Migrate from 3.3 to 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-android.html#migrate-from-32-to-33">Migrate from 3.2 to 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-android.html#migrate-from-31-to-32">Migrate from 3.1 to 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-android.html#migrate-from-30-to-31">Migrate from 3.0 to 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-android.html#migrate-from-20-to-30">Migrate from 2.0 to 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-common.html#upgrading-targets-for-sdk-4x">Upgrading targets for SDK 4.x</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration-common.html#migrating-targets-from-sdk-1x">Migrating targets from SDK 1.x</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-android-release-notes">Wikitude SDK Android Release Notes</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-40">Wikitude SDK 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-33">Wikitude SDK 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-32">Wikitude SDK 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-31">Wikitude SDK 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-30">Wikitude SDK 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-20">Wikitude SDK 2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-12">Wikitude SDK 1.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-11">Wikitude SDK 1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-10">Wikitude SDK 1.0</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+</ol>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+      <footer id="footer">
+        &copy; 2012 -2014 <a href="http://www.wikitude.com">Wikitude GmbH</a> · <a href="http://www.wikitude.com/imprint">Imprint</a>
+        </footer>
+         </div>
+</div>
+        <div id="content">
+            <a name="setup-guide-android"></a><h2>Setup Guide Android</h2>
+<p><img src="images/WT_HG_Developer_GetStarted_Android_IMG.png" /></p>
+<a name="project-setup"></a><h3>Project Setup</h3>
+<ul>
+<li>Create a new <a href="http://developer.android.com/tools/projects/projects-eclipse.html#CreatingAProject" target="_top">Android Application Project</a> (There is also a working SampleProject bundled in this SDK, where all these steps are already made)</li>
+<li>Create a <code>libs</code> folders in your project root directory and copy <code>libs/wikitudesdk.jar</code></li>
+<li><p>In Eclipse enter <code>Preferences</code> -&gt; <code>Android</code> -&gt; <code>Build</code> and ensure the option <code>Force error when external jars contain native libraries</code> is unchecked</p>
+<p>  <img src="images/android_setup_nativelib.png" alt="External jar contains native libraries"></p>
+</li>
+<li><p>Add the following permissions to your Manifest.xml</p>
+</li>
+</ul>
+<pre><code class="lang-xml">&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_GPS&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;
+&lt;uses-feature android:name=&quot;android.hardware.camera&quot; android:required=&quot;true&quot; /&gt;
+&lt;uses-feature android:name=&quot;android.hardware.location&quot; android:required=&quot;true&quot; /&gt;
+&lt;uses-feature android:name=&quot;android.hardware.sensor.accelerometer&quot; android:required=&quot;true&quot; /&gt;
+&lt;uses-feature android:name=&quot;android.hardware.sensor.compass&quot; android:required=&quot;true&quot; /&gt;
+&lt;uses-feature android:glEsVersion=&quot;0x00020000&quot; android:required=&quot;true&quot; /&gt;
+&lt;uses-sdk android:targetSdkVersion=&quot;19&quot; android:minSdkVersion=&quot;9&quot;/&gt;</code></pre>
+<ul>
+<li>The activity holding the AR-View (called <code>architectView</code> in the following) must have set <code>android:configChanges=&quot;screenSize|orientation&quot;</code> in the <code>AndroidManifest.xml</code>,
+for example this could look like:</li>
+</ul>
+<pre><code>&lt;activity android:name=&quot;com.yourcompany.yourapp.YourArActivity&quot;
+   android:configChanges=&quot;screenSize|orientation&quot;/&gt;</code></pre>
+<ul>
+<li>Enter a valid trial license key. Read this chapter on how to <a href="triallicense.html">obtain a free trial key</a>.</li>
+</ul>
+<a name="ar-view-in-activity"></a><h3>AR View in Activity</h3>
+<p>Keep in mind that the Wikitude SDK is not a native Android SDK as you know from other SDK&#39;s. The basic concept is to add an <code>architectView</code> to your project and notify it about lifecycle events. The <code>architectView</code> creates a camera surface and handles sensor events.
+The experience itself, sometime referred to as ARchitect World, is implemented in JavaScript and packaged in your application&#39;s asset-folder (as in this project) or on your own server.
+The experiences are written in HTML and JavaScript and call methods in Wikitude&#39;s <code>AR</code>-namespace (e.g. <a href="../Reference/JavaScript%20Reference/classes/GeoObject.html"><code>AR.GeoObject</code></a>). </p>
+<p>You have to include </p>
+<pre><code> &lt;script src=&quot;architect://architect.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>in your HTML files to use the <code>AR</code> namespace and the <code>architectView</code> will handle them properly. To test an ARchitect World on a desktop browser, you must include <code>ade.js</code> tool instead to avoid JavaScript errors and see a development console.  </p>
+<p>It is recommended to handle your augmented reality experience in a separate <a href="http://developer.android.com/reference/android/app/Activity.html" target="_top">Activity</a>. 
+Declare the <code>architectView</code> inside a <a href="http://developer.android.com/guide/topics/ui/declaring-layout.html" target="_top">layout XML</a>.
+E.g. Add this within <a href="http://developer.android.com/reference/android/widget/FrameLayout.html" target="_top">FrameLayout</a>&#39;s parent tags.</p>
+<pre><code>&lt;com.wikitude.architect.ArchitectView android:id=&quot;@+id/architectView&quot;
+   android:layout_width=&quot;fill_parent&quot; android:layout_height=&quot;fill_parent&quot;/&gt;</code></pre>
+<p>ArchitectView is creating a camera surface so ensure to properly <a href="http://developer.android.com/reference/android/hardware/Camera.html" target="_top">release the camera</a> in case you&#39;re using it somewhere else in your application. 
+Besides the rear-camera the ArchitectView also makes use of compass and accelerometer values, requires <a href="http://www.khronos.org/opengles/2_X/" target="_top">OpenGL 2.0</a> and at least Android 2.3. 
+<code>ArchitectView.isDeviceSupported(Context context)</code> checks wether the current device has all required hard- and software in place or not.</p>
+<p><em>Note: Make AR-View only accessible to supported devices</em> </p>
+<p>It is very important to notify the <code>ArchitectView</code> about <a href="http://developer.android.com/reference/android/app/Activity.html#ActivityLifecycle" target="_top">life-cycle events</a> of the Activity.
+Call architectView&#39;s <code>onCreate(), onPostCreate(), onPause(), onResume(), onDestroy()</code> inside your Activity&#39;s lifecycle methods.
+Best practice is to define a member variable for the <code>architectView</code> in your Activity. Set it right after <code>setContentView</code>in Activity&#39;s <code>onCreate()</code>, and then access <code>architectView</code> via member-variable later on.</p>
+<pre><code>this.architectView = (ArchitectView)this.findViewById( R.id.architectView );
+final ArchitectConfig config = new ArchitectConfig( &quot;&quot; /* license key */ );
+this.architectView.onCreate( config );</code></pre>
+<p>Activity&#39;s <code>onPostCreate()</code> is the best place to load the AR-Experience.</p>
+<pre><code>this.architectView.onPostCreate();
+this.architectView.load( &quot;YOUR-AR-URL&quot; );</code></pre>
+<p>The <code>architectView.load()</code> argument is the path to the html file that defines your AR experience. It can be relative to the asset folder root or a web-url (starting with <code>http://</code> or <code>https://</code>).
+e.g. <code>architectView.load(&#39;arexperience.html&#39;)</code> opens the html in your project&#39;s <code>assets</code>-folder, whereat <code>architectView.load(&#39;http://your-server.com/arexperience.html&#39;)</code> loads the file from a server.</p>
+<p><em>Note: You can only pass arguments to the html file when loading it via url. <code>architectView.load(&#39;arexperience.html?myarg=1&#39;)</code> does not work.</em></p>
+<a name="location"></a><h3>Location</h3>
+<p>Management of the location is important in  location based augmented reality applications. Depending on the use-case location is used via GPS or network and may be updated every second or once in a while.
+Although the SDKExamples project provides a basic implementation of a <code>LocationProvider</code> this is by far not the best <a href="http://developer.android.com/guide/topics/location/strategies.html" target="_top">location strategy</a> available for Android.</p>
+<p><strong>Please use your own advanced location strategy implementation in case you have special requirements</strong>.</p>
+<a name="android-44-kitkat"></a><h3>Android 4.4 (KitKat)</h3>
+<p>Android SDK 19 (KitKat) changes various implementations of the WebView. Please have a look at the <a href="http://developer.android.com/guide/webapps/migrating.html" target="_top">Android 4.4 WebView Migration</a> document by Google for details. Furthermore debugging of your ARchitect World improved a lot, have a look at the <a href="http://developer.android.com/guide/webapps/debugging.html">Debugging Web Apps</a> documentation by Google for a step-by-step guide.</p>
+
+        </div>
+      
+    </div>
+</body>
+</html>
